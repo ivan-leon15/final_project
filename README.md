@@ -1,47 +1,68 @@
-# Análisis de Eficiencia de Operadores en Servicio Telefónico Virtual
-## Descripción del Proyecto
-Este proyecto tiene como objetivo analizar la eficiencia de los operadores en un servicio de telefonía virtual utilizando datos relacionados con el total de llamadas, duración promedio de llamadas, llamadas perdidas, tiempo promedio de espera, y la clasificación de las llamadas en entrantes y salientes.
+# Análisis de Eficiencia de Operadores en Servicio Telefónico Virtual  
 
-## Problema a Resolver
-El objetivo principal es identificar operadores ineficaces basándose en tres criterios:
+## Contexto  
+Este proyecto busca evaluar el desempeño de operadores en un servicio de telefonía virtual mediante el análisis de métricas clave como:  
+- Total de llamadas realizadas y recibidas.  
+- Duración promedio de las llamadas.  
+- Número de llamadas perdidas.  
+- Tiempo promedio de espera.  
+- Clasificación de llamadas en entrantes y salientes.  
 
-- Llamadas perdidas: Un número elevado de llamadas entrantes perdidas.
-- Tiempo de espera: Tiempo prolongado de espera en las llamadas entrantes.
-- Llamadas salientes: Un número reducido de llamadas salientes en caso de que el operador deba realizarlas.
-## Hipótesis
-Se plantea la hipótesis de que existe una diferencia significativa en la cantidad de llamadas perdidas entre los operadores eficientes y no eficientes. Se ha realizado una prueba A/B para evaluar esta hipótesis.
+El análisis tiene como objetivo optimizar la eficiencia operativa y mejorar la calidad del servicio ofrecido.  
 
-## Lenguaje de Programación: Python
-## Bibliotecas de Python:
-- pandas para la manipulación de datos.
-- matplotlib y seaborn para la visualización de los datos.
-- scikit-learn para la evaluación y modelado de datos.
-- scipy para las pruebas estadísticas.
-## Software de Visualización: 
-Tableau para crear gráficos circulares, de barras y otros visuales más avanzados.
-Jupyter Notebook para la implementación del código y documentación del análisis.
-## Metodología
-Transformación de Datos:
+## Herramientas Utilizadas  
 
-Estandarización y normalización de las variables relevantes.
-Categorización de operadores en "eficientes" e "ineficientes" según los criterios mencionados.
-## Análisis Exploratorio de Datos:
+### Lenguaje de Programación  
+- **Python**  
 
-Generación de gráficos como diagramas de dispersión, histogramas y gráficos de barras para entender la distribución de las variables.
-Mapas de calor para identificar correlaciones entre las variables.
-## Prueba A/B:
+### Bibliotecas de Python  
+- **pandas**: Manipulación y análisis de datos.  
+- **matplotlib** y **seaborn**: Creación de visualizaciones.  
+- **scikit-learn**: Construcción y evaluación de modelos predictivos.  
+- **scipy**: Pruebas estadísticas y validación de hipótesis.  
 
-Se utilizó una prueba t de dos muestras para comparar la cantidad de llamadas perdidas entre los operadores eficientes y los no eficientes.
-## Modelado de Datos:
+### Software de Visualización  
+- **Tableau**: Generación de visualizaciones avanzadas para análisis y presentación de resultados.  
+- **Jupyter Notebook**: Ejecución del código y documentación interactiva del proyecto.  
 
-Implementación de modelos de regresión logística y árboles de decisión para predecir la eficiencia de un operador basado en los datos.
-Evaluación de los modelos mediante métricas como precisión, recall y accuracy.
-## Conclusión:
+## Análisis de Resultados  
 
-El análisis reveló una diferencia significativa en las llamadas perdidas entre los operadores eficientes e ineficientes, lo que llevó a la validación de la hipótesis inicial.
-El modelo de regresión logística demostró ser eficaz para la clasificación de los operadores.
-## Resultados y Conclusiones
-Resultados de la Prueba A/B: La prueba t indicó que existe una diferencia significativa entre los operadores eficientes e ineficientes respecto a las llamadas perdidas, lo que justifica la propuesta de acciones para mejorar la eficiencia en los operadores clasificados como ineficaces.
-Modelos Predictivos: La regresión logística y el árbol de decisión mostraron resultados satisfactorios para predecir la eficiencia del operador.
-## Visualización de Datos
-A través de los gráficos generados en Python y Tableau, se presentaron visualizaciones que demuestran las diferencias entre los grupos de operadores, lo que facilita la identificación de las áreas de mejora.
+### Transformación de Datos  
+Se realizaron los siguientes procesos:  
+1. **Estandarización y normalización** de variables relevantes para garantizar uniformidad en el análisis.  
+2. **Categorización de operadores** en "eficientes" e "ineficientes" con base en:  
+   - Número de llamadas perdidas.  
+   - Tiempo de espera en llamadas entrantes.  
+   - Número de llamadas salientes realizadas.  
+
+### Análisis Exploratorio de Datos  
+- Gráficos como histogramas, diagramas de dispersión y gráficos de barras ayudaron a identificar patrones y tendencias clave.  
+- Mapas de calor revelaron correlaciones entre variables como duración promedio y llamadas perdidas.  
+
+### Prueba A/B  
+Se realizó una prueba t de dos muestras para comparar operadores clasificados como "eficientes" e "ineficientes" en términos de llamadas perdidas.  
+
+### Modelado de Datos  
+- Se entrenaron modelos de **regresión logística** y **árboles de decisión** para predecir la eficiencia de los operadores.  
+- Las métricas de evaluación incluyeron precisión, recall y accuracy para determinar el rendimiento de los modelos.  
+
+## Conclusiones  
+
+### Resultados  
+1. **Prueba A/B**: Se confirmó una diferencia significativa en el número de llamadas perdidas entre operadores eficientes e ineficientes, validando la hipótesis inicial.  
+2. **Modelos Predictivos**: La regresión logística demostró ser particularmente efectiva para clasificar operadores, mientras que los árboles de decisión facilitaron interpretaciones más claras.  
+
+### Impacto y Recomendaciones  
+- Se identificaron áreas críticas para intervención, como la capacitación de operadores con bajo rendimiento.  
+- Se sugirió implementar alertas tempranas basadas en modelos predictivos para mitigar problemas de eficiencia.  
+
+## Visualización  
+Las visualizaciones generadas en Python y Tableau proporcionaron información clave para comunicar los hallazgos a las partes interesadas, incluyendo:  
+- Comparaciones gráficas de llamadas perdidas.  
+- Diagramas que resaltan las diferencias en tiempo de espera y llamadas salientes.  
+- Mapas de calor que muestran correlaciones entre métricas críticas.  
+
+## Conclusión General  
+Este proyecto demostró cómo el análisis de datos puede ser una herramienta poderosa para mejorar la eficiencia operativa en servicios de telefonía virtual. Los resultados no solo validaron la hipótesis inicial, sino que también ofrecieron una guía clara para la implementación de mejoras estratégicas.  
+
+
